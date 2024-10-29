@@ -1,0 +1,21 @@
+phases:
+  install:
+    runtime-version:
+      nodejs: 16
+  pre_build:
+    commands:
+      - echo Nothing 
+  build:
+    commands:
+      - echo `date`
+      - npm install
+      - npm run build 
+  post_build:
+    commands:
+      - echo `date`
+      - ll ./dist/shop/
+artifacts:
+  files:
+    - dist/shop/*
+    - dist/shop/assets/*
+    - appspec.yml
