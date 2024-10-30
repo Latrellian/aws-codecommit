@@ -11,7 +11,7 @@ phases:
       - echo `date`
       - npm install
       - npm run build 
-      - TAG=`date "+%Y-%m-%d"`
+      # TAG=`date "+%Y-%m-%d"`
       #DATE命令获取日期作为标签
       - docker build -t 522814725950.dkr.ecr.ap-northeast-1.amazonaws.com/codeseries:latest ./ 
       #build 镜像
